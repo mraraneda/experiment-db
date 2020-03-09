@@ -1,0 +1,11 @@
+## YAML Archivo de configuracion
+
+# Parametros de conección DB
+postgres:
+  # Parámetros básicos de conexión a pg
+  host:           "localhost"
+  port:           5432
+  user:           "postgres"
+  password:       "postgres"
+  dbname:         "MTX"
+  sqlStatement:   "SELECT t.user_doc_nr FROM tusers t, wm_user_codes w WHERE t.user_oper_code = w.wmuc_user and w.wmuc_code = $1;"
